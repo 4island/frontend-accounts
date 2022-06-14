@@ -1,0 +1,44 @@
+@import "./css/AccountDetails.scss";
+@import "./css/Options.scss";
+
+body {
+    background: rgb(214, 212, 212);
+}
+
+.header{
+    height: 60px;
+    background: #24db3c;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.main {
+    width: 100%;
+
+
+    &__titles{
+        text-align: center;
+        font-family: sans-serif;
+    }
+    
+    &__accounts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__account-box{
+        height: 60px;
+        flex-wrap: wrap;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 15px;
+        background: #24db3c;
+        color: white;
+        font-family: sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        flex: 1 0 25%;
+    }
+
+}
