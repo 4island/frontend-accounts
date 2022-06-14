@@ -13,17 +13,17 @@ const MainGrid = () => {
   const query = useQuery();
   const [accounts, setAccounts] = useState([]);
   const { isShowing, toggle } = useOptions();
+  const client = query.get("client");
 
-  const getAccounts = async (value) => {
-    const accountsList = await api.searchAccounts(value);
+  const getAccounts = async (client) => {
+    const accountsList = await api.searchAccounts(client);
     const slicedAccounts = accountsList.slice(0, 5);
     setAccounts(slicedAccounts);
   };
 
   useEffect(() => {
-    const value = query.get("client");
-    if (value) {
-      getAccounts(value);
+    if (client) {
+      getAccounts(client);
     }
   }, [])
 
@@ -42,6 +42,7 @@ const MainGrid = () => {
         <Options
           isShowing={isShowing}
           hide={toggle}
+          clientId={client}
         />
       </div>
     </div>

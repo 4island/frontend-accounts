@@ -1,11 +1,11 @@
-.account-details-container {
+.dotransfers-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
-    &__account-details {
+    &__form {
         width: 500px;
         text-align: center;
         background: #24db3c;
@@ -15,5 +15,11 @@
         border-radius: 15px;
         padding: 15px;
         margin: 20px 0 0 0;
+
+        &__btn{
+            cursor: pointer;
+        }
+
     }
+
 }

@@ -24,7 +24,7 @@ export const AccountDetails = () => {
                         <h3>Cuenta Corriente Nro: {account.numero_de_cuenta}</h3>
                         <h3>Monto: {account.monto}</h3>
                     </div>
-                    <div className="account-details-container__btn-back"
+                    <div className="btn-back"
                         onClick={() => history(`/?client=${account.numero_de_cliente}`)}
                     >
                         <h3>Volver</h3>
