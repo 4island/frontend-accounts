@@ -46,25 +46,25 @@ export const DoTransfer = () => {
             <div className="main__titles">
                 <h1>Tranferencia del Cliente nº: {clientId}</h1>
             </div>
-            <div className="dotransfers-container">
-                <form onSubmit={handleSubmit} className="dotransfers-container__form">
-                    <div className="dotransfers-container__form__row">
-                        <label>Monto</label>
-                        <input name='amount' pattern="^[1-9][0-9]*$" requiered/>
+            <div className="transfers">
+                <form onSubmit={handleSubmit} className="transfers__form">
+                    <div>
+                        <label className="box">Monto</label>
+                        <input className="box" name='amount' pattern="^[1-9][0-9]*$" requiered/>
                     </div>
-                    <div className="dotransfers-container__form__row">
-                        <label>Cuenta origen</label>
-                        <select requiere="true" name='source'>
+                    <div>
+                        <label className="box">Cuenta origen</label>
+                        <select className="box" requiere="true" name='source'>
                             {accounts.map((account) => <option key={account.numero_de_cuenta + 1}>{account.numero_de_cuenta}</option>)}
                         </select>
                     </div>
-                    <div className="dotransfers-container__form__row">
-                        <label>Cuenta destino</label>
-                        <select requiere="true" name='destination'>
+                    <div>
+                        <label className="box">Cuenta destino</label>
+                        <select className="box" requiere="true" name='destination'>
                             {accounts.map((account) => <option key={account.numero_de_cuenta - 1}>{account.numero_de_cuenta}</option>)}
                         </select>
                     </div>
-                    <button className="dotransfers-container__form__btn" type='submit'>Transferir</button>
+                    <button className="transfers__form__btn" type='submit'>Transferir</button>
                 </form>
                 <div className="btn-back"
                     onClick={() => history(`/?client=${clientId}`)}
