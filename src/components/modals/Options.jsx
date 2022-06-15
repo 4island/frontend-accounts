@@ -15,12 +15,12 @@ const Options = ({ isShowing, hide, clientId, history = useNavigate() }) => isSh
         <div className="options__button"
           onClick={() => history(`/dotransfer/${clientId}`)}
         >
-          <h3>Make a Transfer</h3>
+          <h3>Hacer una transferencia</h3>
         </div>
         <div className="options__button"
           onClick={() => history(`/transfer/${clientId}`)}
         >
-          <h3>Show last five transfers</h3>
+          <h3>Ver últimas 5 transferencias</h3>
         </div>
       </div>
     </div>

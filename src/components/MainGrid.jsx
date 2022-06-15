@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import Account from "./Account";
 import { api } from '../Services/Api';
-import useOptions from "./useOptions";
-import Options from "./Options";
+import useOptions from "./modals/useOptions";
+import Options from "./modals/Options";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
