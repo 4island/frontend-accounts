@@ -15,7 +15,9 @@ export const DoTransfer = () => {
     const postClientTransfer = async (data) => {
         try {
             const response = await api.postTransfer(data);
-            if (response) alert('Transferencia realizada')
+            response.status != 200 ?
+                alert('Hubo un error intente nuevamente') :
+                alert('Transferencia realizada')
         } catch {
             alert('Hubo un error intente nuevamente');
         }
@@ -35,8 +37,8 @@ export const DoTransfer = () => {
             numero_de_cliente: clientId
         }
         objectData.numero_cuenta_origen != objectData.numero_cuenta_destino ?
-        postClientTransfer(objectData) :
-        alert('La cuenta de origen debe ser diferente a la del destino!');
+            postClientTransfer(objectData) :
+            alert('La cuenta de origen debe ser diferente a la del destino!');
 
     }
 
@@ -50,7 +52,7 @@ export const DoTransfer = () => {
                 <form onSubmit={handleSubmit} className="transfers__form">
                     <div>
                         <label className="box">Monto</label>
-                        <input className="box" name='amount' pattern="^[1-9][0-9]*$" required/>
+                        <input className="box" name='amount' pattern="^[1-9][0-9]*$" required />
                     </div>
                     <div>
                         <label className="box">Cuenta origen</label>
