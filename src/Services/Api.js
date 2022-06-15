@@ -25,7 +25,7 @@ export const api = {
                     'Content-Type': 'application/json'
                 }
             });
-        const responseText = await response.text();
+        const responseText = await response.json();
         return responseText
     }
 }

@@ -13,7 +13,12 @@ export const DoTransfer = () => {
     };
 
     const postClientTransfer = async (data) => {
-        await api.postTransfer(data);
+        try {
+            const response = await api.postTransfer(data);
+            if (response) alert('Transferencia realizada')
+        } catch {
+            alert('Hubo un error intente nuevamente');
+        }
     };
 
     useEffect(() => {
@@ -29,12 +34,10 @@ export const DoTransfer = () => {
             monto: data.get('amount'),
             numero_de_cliente: clientId
         }
-        if (objectData.numero_cuenta_origen != objectData.numero_cuenta_destino) {
-            const response = postClientTransfer(objectData);
-            response ? alert('Transferencia realizada') : null
-        } else {
-            alert('La cuenta de origen debe ser diferente a la del destino!');
-        }
+        objectData.numero_cuenta_origen != objectData.numero_cuenta_destino ?
+        postClientTransfer(objectData) :
+        alert('La cuenta de origen debe ser diferente a la del destino!');
+
     }
 
     return (
@@ -47,7 +50,7 @@ export const DoTransfer = () => {
                 <form onSubmit={handleSubmit} className="dotransfers-container__form">
                     <div className="dotransfers-container__form__row">
                         <label>Monto</label>
-                        <input requiere="true" name='amount' pattern="^[1-9][0-9]*$" />
+                        <input name='amount' pattern="^[1-9][0-9]*$" requiered/>
                     </div>
                     <div className="dotransfers-container__form__row">
                         <label>Cuenta origen</label>
