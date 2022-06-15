@@ -50,17 +50,17 @@ export const DoTransfer = () => {
                 <form onSubmit={handleSubmit} className="transfers__form">
                     <div>
                         <label className="box">Monto</label>
-                        <input className="box" name='amount' pattern="^[1-9][0-9]*$" requiered/>
+                        <input className="box" name='amount' pattern="^[1-9][0-9]*$" required/>
                     </div>
                     <div>
                         <label className="box">Cuenta origen</label>
-                        <select className="box" requiere="true" name='source'>
+                        <select className="box" required name='source'>
                             {accounts.map((account) => <option key={account.numero_de_cuenta + 1}>{account.numero_de_cuenta}</option>)}
                         </select>
                     </div>
                     <div>
                         <label className="box">Cuenta destino</label>
-                        <select className="box" requiere="true" name='destination'>
+                        <select className="box" required name='destination'>
                             {accounts.map((account) => <option key={account.numero_de_cuenta - 1}>{account.numero_de_cuenta}</option>)}
                         </select>
                     </div>
