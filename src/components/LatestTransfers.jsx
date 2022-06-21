@@ -9,8 +9,7 @@ export const LatestTransfers = () => {
     const {clientId} = useParams();
     const getLastestTransfers = async () => {
         const transfers = await api.getTransfers(clientId);
-        const slicedTransfers = transfers.slice(-5);
-        setTransfers(slicedTransfers);
+        setTransfers(transfers);
     };
     useEffect(() => {
         getLastestTransfers();
