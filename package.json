@@ -6,21 +6,25 @@
   "scripts": {
     "start": "webpack-cli serve --open --mode development",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "react-scripts test --coverage"
   },
+  "testEnvironment": "jsdom",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "html-loader": "^3.1.0",

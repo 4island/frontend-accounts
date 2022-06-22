@@ -5,7 +5,7 @@ const Account = (props) => {
     const history = useNavigate();
     const account = props.accountNumber;
     return (
-        <div className="main__account-box"
+        <div className="accounts-grid__account-box"
             onClick={ () => {
                 if (account) {
                     history(`/account/${props.clientNumber}/${props.accountNumber}`);

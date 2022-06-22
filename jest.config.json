@@ -1,0 +1,6 @@
+{
+    "setupFilesAfterEnv": [
+        "./setupTests.js"
+    ],
+    "testEnvironment": "jsdom"
+}

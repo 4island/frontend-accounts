@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
-import { api } from '../Services/Api';
+import { api } from '../../Services/Api';
 
 export const DoTransfer = () => {
     const history = useNavigate();
@@ -45,7 +45,7 @@ export const DoTransfer = () => {
     return (
         <div className="main">
             <div className="header" />
-            <div className="main__titles">
+            <div className="section-titles">
                 <h1>Tranferencia del Cliente nº: {clientId}</h1>
             </div>
             <div className="transfers">
