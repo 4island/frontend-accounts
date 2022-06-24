@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../../Services/Api';
-import Transfer from '../Transfer'
+import Transfer from './Transfer'
 
-export const LatestTransfers = () => {
+export const Transfers = () => {
     const history = useNavigate();
     const [transfers, setTransfers] = useState([]);
     const {clientId} = useParams();

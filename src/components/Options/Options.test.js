@@ -2,6 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import Options from "./Options";
+import useOptions from './useOptions'
 
 describe('<Options />', () => {
     let mockFunction
